@@ -1,0 +1,2 @@
+# ellipsis-doc
+Ellipsis documentation
