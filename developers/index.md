@@ -4,10 +4,10 @@
 
 The reference explains the core concepts and features of Ellipsis, a tool to perform tasks, work with data, and answer questions in chat.
 
-Ellipsis learns how to respond using “skills”, which can be installed or created. A skill is a collection of one or more “actions” that perform a task and/or return a response. Typically, all of the actions in a skill are related in some way, by theme or by the kind of data.
+Ellipsis learns how to respond using “skills”, which can be installed or created from scratch. A skill is a collection of one or more “actions” that perform a task and/or return a response. Typically, all of the actions in a skill are related in some way, by theme or by the kind of data they use.
 
 1. [Skills](skills/index.md)
-  1. [Name and description](skills/name_description.md)
+  1. [Name and description](skills/index.md)
   2. [Cloning and deleting](skills/cloning_deleting.md)
   3. [Installing and re-installing](skills/installing.md)
   4. [Exporting and importing](skills/export_import.md)

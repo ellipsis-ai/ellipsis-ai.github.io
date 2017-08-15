@@ -24,11 +24,11 @@ For example, if you have two versions saved, the current version will be `v2` an
 
 ## Skill details: the title, description, and icon
 
-A title and description explain the purpose of the skill, and are displayed when users ask for help. An emoji icon can be used as a mnemonic. Ideally, the icon for each skill is unique within a team.
+A title and description explain the purpose of the skill, and are displayed when users ask for help. Include an emoji icon to make the skill more identifiable. (Ideally, the emoji for each skill should be unique for each of your team's skills.)
 
 ## Skill installation, export, deletion
 
-Skills can be installed and deleted from the list of skills page. You can reinstall a skill to get or restore the latest, published version. From the Skill details page in the skill editor, you can also export a skill to a ZIP file, or delete the skill.
+Skills can be installed and deleted from the list of skills page. You can reinstall a skill to get or restore or update to the most recent published version. From the Skill details page in the skill editor, you can also export a skill to a ZIP file, or delete the skill.
 
 ## Exported skills
 
