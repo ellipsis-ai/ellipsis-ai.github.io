@@ -10,19 +10,19 @@ There are four elements that define how an action works:
 
 1. [Triggers](./triggers.md)
 
-  Triggers define what text Ellipsis will listen for in chat. When someone types a matching trigger, Ellipsis will run the action. Actions can also be triggered by [scheduling](../../users/scheduling/index.md), or by code in other actions.
+    Triggers define what text Ellipsis will listen for in chat. When someone types a matching trigger, Ellipsis will run the action. Actions can also be triggered by [scheduling](../../users/scheduling/index.md), or by code in other actions.
 
 2. [Inputs](./inputs.md)
 
-  Inputs define what questions (if any) Ellipsis will ask the user before performing a task or returning a response.
+    Inputs define what questions (if any) Ellipsis will ask the user before performing a task or returning a response.
 
 3. [Node.js function](./function.md)
 
-  The Node.js function is the code you want Ellipsis to run each time this action is triggered. The function receives the answers to any questions specified by the inputs.
+    The Node.js function is the code you want Ellipsis to run each time this action is triggered. The function receives the answers to any questions specified by the inputs.
 
 4. [Response template](./template.md)
 
-  The response template defines what Ellipsis will say when the action is complete. Data or text from the function can be included in the response.
+    The response template defines what Ellipsis will say when the action is complete. Data or text from the function can be included in the response.
 
 ## [Testing an action](./testing.md)
 

@@ -1,8 +1,8 @@
 # Triggers
 
-Triggers tell Ellipsis what text to listen for in order to run an action. When someone types a phrase that matches a trigger in chat, Ellipsis will run the action and return a response (if any) in the same channel, group or direct message.
+Triggers tell Ellipsis what text to listen for in order to run an action. When someone types a phrase in chat that matches a trigger, Ellipsis will run the action and return a response (if any) in the same channel (or group or direct message).
 
-**Note: Ellipsis must be present in the channel to respond.**
+_Note: Ellipsis must be present in the channel to see and respond to a trigger._
 
 ## Trigger types
 
@@ -10,13 +10,15 @@ There are two types of triggers:
 - phrase triggers
 - regular expression triggers
 
-You can also decide whether each trigger should be case-sensitive (i.e. lowercase and uppercase letters must match the trigger exactly).
+You can also decide whether each trigger should be case-sensitive (whether lowercase and uppercase letters must match exactly).
 
-## "To Ellipsis" versus "Any message"
+## _To Ellipsis_ versus _Any message_
 
-For each trigger, you can decide whether someone needs to mention Ellipsis (the default), or whether any message with that text will match in a group channel. (One-to-one messages to Ellipsis will always trigger an action if the text matches.)
+By default, when _To Ellipsis_ is selected, a person must mention Ellipsis in a message to activate the trigger if it's in a group channel. (If the message is private from the user to Ellipsis, this does not apply.)
 
-**Note: a shortcut to mention Ellipsis is to start a message with three periods or the ellipsis character ("..." or "…").**
+If _Any message_ is selected, Ellipsis will respond regardless of whether it is mentioned in the message.
+
+_Note: a shortcut to mention Ellipsis is to start a message with three periods or the ellipsis character ("..." or "…")._
 
 ### Phrase triggers
 
@@ -105,3 +107,4 @@ _Matching messages:_
 
 _Non-matching messages:_
 - `...remind me at 19:00 UTC`
+
