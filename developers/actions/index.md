@@ -6,7 +6,7 @@ Actions can run code to perform dynamic tasks, or they can just return a static 
 
 ## Components of the action
 
-There are four elements that define how an action works:
+There are four components that define how an action works:
 
 1. [Triggers](./triggers.md)
 
