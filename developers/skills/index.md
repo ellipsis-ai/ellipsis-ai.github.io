@@ -12,9 +12,9 @@ Skills consist of three kinds of components:
 
 ## Skill editor
 
-The skill editor webpage shows the current (active) version of a skill, with all of its components. You can switch between each component, and add new components using the sidebar.
+The skill editor webpage shows the current (active) version of a skill, with all of its components. You can edit the skill details, edit each component, switch between components, and add new components using the sidebar.
 
-### Version history
+## Version history
 
 A version history browser shows a list of all saved versions of a skill. A new version is created each time the skill is saved.
 
@@ -26,10 +26,10 @@ For example, if you have two versions saved, the current version will be `v2` an
 
 A title and description explain the purpose of the skill, and are displayed when users ask for help. Include an emoji icon to make the skill more identifiable. (Ideally, the emoji for each skill should be unique for each of your team's skills.)
 
-## Skill installation, export, deletion
+## Skill installation, cloning, merging, export, deletion
 
-Skills can be installed and deleted from the list of skills page. You can reinstall a skill to get or restore or update to the most recent published version. From the Skill details page in the skill editor, you can also export a skill to a ZIP file, or delete the skill.
+Skills can be [installed, cloned (copied), merged together, and deleted](./management.md) from the list of skills page. You can also reinstall a skill to get or restore or update to the most recent published version. From the Skill details page in the skill editor, you can also export a skill to a ZIP file, or delete the skill.
 
-## Exported skills
+## Exporting skills
 
 Exported skills preserve all of the components, code and configuration of a skill. (In future, you will also be able to import a previously-exported skill.)

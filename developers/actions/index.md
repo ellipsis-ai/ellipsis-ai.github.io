@@ -4,6 +4,10 @@ Actions are how people on your team interact with Ellipsis. Each action can perf
 
 Actions can run code to perform dynamic tasks, or they can just return a static response.
 
+## Name and description
+
+Each action can have a name and description which can be used to help explain what it's for. Action names can also be used to trigger actions through the [../ellipsis_api/index.md](Ellipsis API). The name and description are optional.
+
 ## Components of the action
 
 There are four components that define how an action works:
@@ -24,7 +28,7 @@ There are four components that define how an action works:
 
     The response template defines what Ellipsis will say when the action is complete. Data or text from the function can be included in the response.
 
-## [Testing an action](./testing.md)
+## [Testing actions](./testing.md)
 
 Actions can be [tested](./testing.md) from the skill editor to see whether text matches a trigger, and to see what response Ellipsis provides after running the code.
 

@@ -10,8 +10,6 @@ There are two types of triggers:
 - phrase triggers
 - regular expression triggers
 
-You can also decide whether each trigger should be case-sensitive (whether lowercase and uppercase letters must match exactly).
-
 ## _To Ellipsis_ versus _Any message_
 
 By default, when _To Ellipsis_ is selected, a person must mention Ellipsis in a message to activate the trigger if it's in a group channel. (If the message is private from the user to Ellipsis, this does not apply.)
@@ -22,7 +20,7 @@ _Note: a shortcut to mention Ellipsis is to start a message with three periods o
 
 ### Phrase triggers
 
-By default, triggers match whenever someone begins a message with the phrase specified by the trigger, while also mentioning Ellipsis.
+By default, triggers match whenever someone begins a message with the phrase specified by the trigger, while also mentioning Ellipsis. Upper/lowercase differences are always ignored.
 
 #### Example
 
@@ -68,7 +66,7 @@ _Matching messages:_
 
 ### Regular expression triggers
 
-Regular expression (aka regex) triggers use [Java-compatible pattern matching](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html). This permits a lot more flexibility in terms of deciding what text should match, at the expense of readability. It's usually a good idea to define at least one phrase trigger in addition to any regular expression triggers.
+Regular expression (aka regex) triggers use [Java-8-compatible pattern matching](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html). This permits a lot more flexibility in terms of deciding what text should match, at the expense of readability. (It's usually a good idea to define at least one phrase trigger in addition to any regular expression triggers.)
 
 #### Example
 
@@ -80,6 +78,13 @@ _Matching message:_
 
 _Non-matching message:_
 - `@ellipsis fetch the report for today` -- the `$` terminator prevents matching partial text
+
+#### Case sensitivity
+
+Case sensitivity is turned off by default. To turn it on, add the prefix `(?-i)` to your regular expression.
+
+- `ABC` -- will match "ABC", "abc", "Abc", etc.
+- `(?-i)ABC` -- will only match "ABC", not "abc" or "Abc"
 
 ### Collecting inputs with regular expression patterns
 
