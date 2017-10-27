@@ -21,7 +21,7 @@ Ellipsis learns how to respond using “skills”, which can be installed or cre
 3. [Custom data types](reference/data_types/index.md)
 4. [Libraries](reference/libraries/index.md)
 5. [Node.js `ellipsis` object](reference/ellipsis_object/index.md)
-6. [Ellipsis API](reference/ellipsis_api/index.md)
+6. [Ellipsis API](reference/api/v1/overview)
 7. [Third-party APIs](reference/third_party_apis/index.md)
 8. [Environment variables](reference/environment_variables.md)
 
@@ -31,3 +31,4 @@ or customizing existing ones.
 
 1. Interfacing with external Services and APIs
     1. [Using Async APIs](cookbook/async_api.md)
+    2. [Using a specific npm package version](cookbook/npm_versioning.md)

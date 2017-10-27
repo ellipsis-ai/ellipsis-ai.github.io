@@ -2,40 +2,84 @@
 
 ## Problem
 You want to create a Skill that uses an asynchronous API. You want the async API
-to invoke an Action or notify to a user or a channel when an specific event occurs.
+to invoke an Action or notify a user or a channel when a specific event occurs.
 
 ## Solution
-You can use the Ellipsis REST APIs as webhooks and pass them directly to the asynch
-APIs.
+There are several ways to solve this use case depending on the details of the async
+API and what control you have on it.
 
-First you need to create an [authentication token](https://bot.ellipsis.ai/settings/https://bot.ellipsis.ai/list_api_tokens).
-With the token you can now call the Ellipsis REST APIs.
+### Case 1: you have full control on the async API and system.
+In this case you simply generate an auth token in your Action code and pass it
+to the async API with the request. You then change the code of the async API to call
+the Ellipsis REST APIs with the auth token.
 
-For instance, let's say you have created an Action called "echo" that takes
-and argument called _text_ and just prints it out. You can
-run this action by doing an HTTP POST to https://bot.ellipisis.ai/api/v1/action_requests
-with the following body:
+Let's look at an example.
 
-```
-curl https://bot.ellipsis.ai/api/v1/action_requests \
-   -X POST \
-   -d "message=...echo Ciao!" \
-   -d "responseContext=slack" \
-   -d "channel=#dev" \
-   -d "token=your_auth_token"
-```
+Report Generator is a system that builds complex Excel reports and store them
+in AWS S3. Some of the reports take minutes to generate therefore Report
+Generator has an async API. Our goal is to implement an Ellipsis Action, let's
+call it _get_report_, that uses the Report Generator API to request a new
+report on behalf of the user and that notifies the user when the report is ready.
 
-Or if you want want Ellipsis to send a message to user @mark:
+Ellipsis _get_report_ implementation looks like this:
 
 ```
-curl https://bot.ellipsis.ai/api/v1/messages \
-   -X POST \
-   -d "message=Hello" \
-   -d "responseContext=slack" \
-   -d "channel=@mark" \
-   -d "token=your_auth_token"
+// request report Action
+
+const EllipsisApi = ellipsis.require('ellipsis-api');
+const api = new EllipsisApi(ellipsis).actions;
+
+// Async API
+const reportBuilder = require('my-report-builder');
+
+// The token expires after 2 minutes.
+api.generateToken({ isOneTime: false, expirySeconds: 120 }).then(token => {
+    reportBuilder({
+      reportTye: "ARM",
+      startDate: "2017-01-01",
+      endDate: "2017-02-01",
+      ellipsisData: {
+        user: @mark,
+        authToken: token.id
+      }
+    });
+
+    //...
+});
+
+```
+Assuming the Request Report system is implemented in Node.js, somewhere in the
+code after the report has been generated and upload to AWS S3 you call the Ellipsis
+REST API to let the user know the requested report is ready:
+
+```
+const request = require('request');
+const ellipsisData = getEllipsisData();
+
+const content = {
+    message: "Your report is ready: https://reports-123.s3.aws.amazon.com/report-123asdasf3425.xls",
+    responseContext: "slack",
+    channel: ellipsisData.user,
+    token: ellipsisData.token
+  };
+request(
+  {
+    url: "https://bot.ellipsis.ai/api/v1/say",
+    method: "POST",
+    json: true,
+    body: content
+  },
+  function (error, response, body) { console.log(response); }
+);
 ```
 
+### Case 2: the async API supports webhooks for event notifications.
+This is the case where the async api takes a URL to post to when a certain event
+occurs, you do not have control over the source code of the async API. A classic
+example is the [Github Webhooks API ](https://developer.github.com/webhooks/)
+
+...to be finished
 ## Discussion
 
 ## See Also
+* [Ellipis API](/developers/reference/api/v1/overview)
