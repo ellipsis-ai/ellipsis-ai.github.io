@@ -6,22 +6,19 @@ jobs:
         environment:
           AWS_REGION: us-east-1
           JEKYLL_ENV: production
-    # working_directory: ~/ellipsis-ai.github.io
+    working_directory: ~/ellipsis-ai.github.io
     steps:
       - checkout
       - run:
           name: Debugging
           command: ls -l
       - restore_cache:
-          key: docs-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-      # - run:
-      #     name: Install Ruby dependencies
-      #     command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+          key: gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install Ruby dependencies
-          command: bundle install
+          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       - save_cache:
-          key: docs-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - "vendor/bundle"
       - run:
