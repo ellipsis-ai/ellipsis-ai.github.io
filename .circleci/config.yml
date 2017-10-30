@@ -1,0 +1,28 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: jekyll/jekyll:latest
+        environment:
+          AWS_REGION: us-east-1
+          JEKYLL_ENV: production
+    working_directory: ~/docs
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            bundle install
+      - run:
+          name: Build site
+          command: |
+            bundle exec jekyll build
+      - run:
+          name: Deploy if prod branch
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "prod" ]
+            then
+              mkdir ~/.aws
+              echo -e "[deployer]\naws_access_key_id = ${DEPLOYER_AWS_KEY}\naws_secret_access_key = ${DEPLOYER_AWS_SECRET}\nregion = us-east-1" >> ~/.aws/credentials
+              AWS_PROFILE=deployer ./deploy
+            fi
