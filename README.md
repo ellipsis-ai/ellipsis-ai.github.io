@@ -1,7 +1,8 @@
-# Ellipsis Guide
+---
+title: The Ellipsis Guide
+---
 
-1. User's guide
-2. [Developer's guide](developers/index.md)
+Welcome to the Ellipsis Guide, a reference for how to use Ellipsis.ai. Use the table of contents to navigate through the guide.
 
 ## Editing the guide
 

@@ -1,4 +1,6 @@
-# Actions
+---
+title: Actions
+---
 
 Actions are how people on your team interact with Ellipsis. Each action can perform a task and/or respond to someone with an answer.
 

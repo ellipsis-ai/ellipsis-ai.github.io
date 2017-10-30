@@ -1,5 +1,4 @@
 # https://github.com/jekyll/docker
-
 version: '2'
 services:
   site:

@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
-
-title: Ellipsis Docs
+markdown: kramdown
+title: Ellipsis Guide
+description: How to use Ellipsis.ai
