@@ -10,11 +10,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Create bundle dir
-          command: bundle config
-      - run:
           name: Debugging
-          command: ls -l
+          command: |
+            ls -l
+            env
       - restore_cache:
           key: gems-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
