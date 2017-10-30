@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: jekyll/jekyll:latest
+      - image: ellipsis/circleci_www:1.0
         environment:
           AWS_REGION: us-east-1
           JEKYLL_ENV: production
@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Build site
           command: |
-            jekyll build
+            bundle exec jekyll build
       - run:
           name: Deploy if prod branch
           command: |
