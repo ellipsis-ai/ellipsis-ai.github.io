@@ -10,6 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Create bundle dir
+          command: bundle config
+      - run:
           name: Debugging
           command: ls -l
       - restore_cache:
