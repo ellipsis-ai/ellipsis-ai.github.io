@@ -1,4 +1,7 @@
-# API Reference
+---
+title: API Reference
+---
+
 ## Authentication
 ## Errors
 ## Versioning

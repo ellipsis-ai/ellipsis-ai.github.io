@@ -1,4 +1,6 @@
-# NPM Versioning
+---
+title: NPM Versioning
+---
 
 ## Problem
 You want to use a specific version of an NPM package in an Ellipsis action.
