@@ -2,7 +2,7 @@
 version: '2'
 services:
   site:
-    command: jekyll serve
+    command: jekyll build
     image: jekyll/jekyll:latest
     volumes:
       - $PWD:/srv/jekyll
