@@ -9,6 +9,9 @@ jobs:
     working_directory: ~/ellipsis-ai.github.io
     steps:
       - checkout
+      - run:
+          name: Debugging
+          command: ls -l
       - restore_cache:
           key: docs-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
