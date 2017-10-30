@@ -6,7 +6,7 @@ jobs:
         environment:
           AWS_REGION: us-east-1
           JEKYLL_ENV: production
-    working_directory: ~/ellipsis-ai.github.io
+    # working_directory: ~/ellipsis-ai.github.io
     steps:
       - checkout
       - run:
