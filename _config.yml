@@ -8,3 +8,16 @@ url: "https://www.ellipsis.ai" # the base hostname & protocol for your site, e.g
 twitter_username: EllipsisBot
 github_username:  ellipsis-ai
 repository: "ellipsis-ai/ellipsis-ai.github.io"
+
+collections:
+  developers:
+    output: true
+    permalink: /:collection/:path/
+    title: Developer’s guide
+
+defaults:
+  - scope:
+      path: ""
+      type: developers
+    values:
+      layout: developers

@@ -4,10 +4,23 @@
 
 <h5>Contents</h5>
 
+<!--
+Path: {{ page.path }}
+Name: {{ page.name }}
+Title: {{ page.title }}
+Collection: {{ page.collection }}
+-->
+
 <ol class="upper-roman">
-  <li><a href="/developers/">Developer’s guide</a>
+  <li>
+    <a href="/developers/"
+       class="{% if page.collection == "developers" %}type-bold{% endif %}"
+    >Developer’s guide</a>
     <ol>
-      <li><a href="/developers/reference/">Reference</a>
+      <li>
+        <a href="/developers/reference/"
+           class=""
+        >Reference</a>
       <li><a href="/developers/cookbook/">Cookbook</a>
   </li>
 

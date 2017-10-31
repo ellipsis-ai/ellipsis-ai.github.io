@@ -2,7 +2,7 @@
 title: Inputs
 ---
 
-Adding inputs to an [action](./index.md) allows you to collect answers from the user that can then be used in your [function](./function.md). Answers are collected after a user triggers the action, before the function runs.
+Adding inputs to an [action]({% link _developers/reference/actions.md %}) allows you to collect answers from the user that can then be used in your [function]({% link _developers/reference/actions/function.md %}). Answers are collected after a user triggers the action, before the function runs.
 
 Actions don't require inputs, but if you need to collect some text or a value when the action runs that may change each time, or is different for each user, then you should use an input.
 
@@ -61,7 +61,7 @@ If you set an input to be Yes/No, your function will receive a [JavaScript Boole
 
 ### Custom data types
 
-In addition to the basic types, you can set inputs to [custom data types](../data_types/index.md) that rely on code or a table of data to determine what a valid answer is. The user will be asked to choose an answer from a list of possible answers, and the function will receive a JavaScript object with the chosen item's properties.
+In addition to the basic types, you can set inputs to custom data types that rely on code or a table of data to determine what a valid answer is. The user will be asked to choose an answer from a list of possible answers, and the function will receive a JavaScript object with the chosen item's properties.
 
 Custom data types are useful when you want the user's answer to be limited to specific choices. Some examples:
 
@@ -71,6 +71,6 @@ Custom data types are useful when you want the user's answer to be limited to sp
 
 ## Collecting input answers from triggers
 
-The answers for each input can be collected from the [trigger text](./triggers.md) that triggered the action in the first place, if the trigger includes ["fill-in-the-blank" inputs](./triggers.md#fill-in-the-blank-input), or [regular expression capturing parentheses](./triggers.md#collecting-inputs-with-regular-expression-patterns).
+The answers for each input can be collected from the [trigger text]({% link _developers/reference/actions/triggers.md %}) that triggered the action in the first place, if the trigger includes ["fill-in-the-blank" inputs]({% link _developers/reference/actions/triggers.md %}#fill-in-the-blank-input), or [regular expression capturing parentheses]({% link _developers/reference/actions/triggers.md %}#collecting-inputs-with-regular-expression-patterns).
 
 When an answer is found in the trigger, the question will be skipped. In addition, answers from triggers will override any saved answer.
