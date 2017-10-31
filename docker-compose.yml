@@ -1,15 +1,25 @@
-# https://github.com/jekyll/docker
-
+# NOTE 1: Using the official jekyll docker did not work since we use jekyll-less
+# which requires therubyracer which requires some version of the Javascript V8
+# engine that is NOT compatible with Linux Alpine.
+#
+# NOTE 2: busybox is used to cache the gems so we do not have to bundle install
+# everytime we start the container.
+#
 version: '2'
 services:
-  site:
-    command: jekyll build
-    image: jekyll/jekyll:latest
+  jekyll:
+    image: ellipsis/circleci_www:1.0
     volumes:
-      - $PWD:/srv/jekyll
-      - $PWD/vendor/bundle:/usr/local/bundle
+      - .:/www
+    volumes_from:
+       - box
     ports:
-      - 4000:4000
-      - 35729:35729
-      - 3000:3000
-      -   80:4000
+      - "4000:4000"
+    working_dir: /www
+    command: bash -c "bundle install && bundle exec jekyll serve --host=0.0.0.0"
+
+  box:
+    image: busybox
+    command: "echo busybox rady to host gems"
+    volumes:
+      - /box

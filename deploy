@@ -12,4 +12,4 @@ aws s3 sync ./_site s3://docs.ellipsis.ai/ --acl=public-read
 
 aws cloudfront create-invalidation \
     --paths /index.html /index.json /404.html \
-    --distribution-id E32EYVF68FB1JG
+    --distribution-id E18Q2N6CZFALZW
