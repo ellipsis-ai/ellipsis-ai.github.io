@@ -41,11 +41,9 @@
   <div id="content" class="flex-row-cascade ptxxxl">
     <div class="columns flex-row-expand flex-columns flex-columns-left mobile-flex-no-columns">
       <div class="column column-page-sidebar flex-column flex-column-left bg-blue-lighter border-right prn position-relative mobile-position-fixed-top-full mobile-position-z-front ptxl">
-        <div class="phxl">
-          {% include toc.html %}
-        </div>
+        {% include toc.html %}
       </div>
-      <div class="column column-page-main-wide flex-column flex-column-main bg-blue-lightest phxxxxl">
+      <div class="column column-page-main-wide flex-column flex-column-main bg-blue-lightest phxxxxl pbxl">
 
         {% if page.title %}
           <h1>{{ page.title }}</h1>
