@@ -1,4 +1,3 @@
-theme: jekyll-theme-minimal
 source: src/
 destination: dist/
 title: Ellipsis Guide
