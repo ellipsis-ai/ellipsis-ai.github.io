@@ -1,6 +1,4 @@
-_site/
-.sass-cache/
 .jekyll-metadata
 .DS_Store
-vendor/
 dist/
+vendor/
