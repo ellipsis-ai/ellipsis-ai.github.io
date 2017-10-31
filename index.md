@@ -1,5 +1,5 @@
 ---
-title: The Ellipsis Guide
+title: Ellipsis Guide
 ---
 
 Welcome to the Ellipsis Guide, a reference for how to use Ellipsis.ai. Use the table of contents to navigate through the guide.

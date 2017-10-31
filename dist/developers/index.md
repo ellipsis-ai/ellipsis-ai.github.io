@@ -11,12 +11,12 @@ Ellipsis learns how to respond using “skills”, which can be installed or cre
 
 1. [Skills](reference/skills/index.md)
 2. [Actions](reference/actions/index.md)
-3. [Custom data types](reference/data_types/index.md)
-4. [Libraries](reference/libraries/index.md)
-5. [Node.js `ellipsis` object](reference/ellipsis_object/index.md)
-6. [Ellipsis API](reference/api/v1/overview)
-7. [Third-party APIs](reference/third_party_apis/index.md)
-8. [Environment variables](reference/environment_variables.md)
+3. Custom data types
+4. Libraries
+5. Node.js `ellipsis` object
+6. [Ellipsis API](reference/api/v1/)
+7. Third-party APIs
+8. Environment variables
 
 ## [Cookbook](cookbook/)
 The cookbook focuses on specific problems you may face when building new skills,
