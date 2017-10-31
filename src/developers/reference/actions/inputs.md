@@ -1,4 +1,6 @@
-# Inputs
+---
+title: Inputs
+---
 
 Adding inputs to an [action](./index.md) allows you to collect answers from the user that can then be used in your [function](./function.md). Answers are collected after a user triggers the action, before the function runs.
 

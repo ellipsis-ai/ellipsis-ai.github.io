@@ -1,4 +1,13 @@
-# Ellipsis Guide
+---
+title: Ellipsis Guide
+---
 
-1. User's guide
-2. [Developer's guide](developers/index.html)
+Welcome to the Ellipsis Guide, a reference for how to use Ellipsis.ai. Use the table of contents to navigate through the guide.
+
+## Editing the guide
+
+To edit the guide, clone this repo and start Jekyll:
+
+```bash
+$ docker-compose up
+```

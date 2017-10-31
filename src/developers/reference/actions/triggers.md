@@ -1,4 +1,6 @@
-# Triggers
+---
+title: Triggers
+---
 
 Triggers tell Ellipsis what text to listen for in order to run an action. When someone types a phrase in chat that matches a trigger, Ellipsis will run the action and return a response (if any) in the same channel (or group or direct message).
 

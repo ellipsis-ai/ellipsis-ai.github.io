@@ -1,4 +1,6 @@
-# Skills
+---
+title: Skills
+---
 
 A skill is a set of one or more related actions that perform tasks or answer questions. Actions within a skill can share many resources with each other: shared code, data storage, connections to other APIs, and dependencies.
 

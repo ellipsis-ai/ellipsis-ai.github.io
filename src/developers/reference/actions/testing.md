@@ -1,4 +1,6 @@
-# Testing actions
+---
+title: Testing actions
+---
 
 The skill editor has a built-in testing tool that can help you test the components of an action:
 

@@ -1,4 +1,6 @@
-# The response template
+---
+title: The response template
+---
 
 The template tells Ellipsis what to say to the user when the action is complete. It can include:
 
