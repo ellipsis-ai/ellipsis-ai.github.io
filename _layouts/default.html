@@ -30,7 +30,7 @@
     <div class="container container-wide prm mobile-prs">
       <div class="columns columns-elastic">
         <div class="column column-expand pts mobile-ptxs">
-          <a class="link-pink display-inline-block align-b mrs mobile-mtxs" href="/">
+          <a class="link-pink display-inline-block align-b mrs mobile-mtxs pvxs" href="/">
             <span class="display-inline-block align-m">{% include logo.html %}</span>
             <span class="display-inline-block align-m mlxs mbxs type-bold"> Guide</span>
           </a>
@@ -38,36 +38,23 @@
       </div>
     </div>
   </header>
-  <div id="content" class="flex-row-cascade ptxxl">
-    <div class="flex-columns flex-row-expand">
-      <div class="flex-column flex-column-left flex-rows prn">
-        <div class="columns flex-columns flex-row-expand">
-          <div class="column column-one-quarter flex-column bg-blue-lighter ptxl container">
-
-            {% capture toc %}{% include toc.md %}{% endcapture %}
-            {{ toc | markdownify }}
-
-          </div>
-          <div class="column column-three-quarters flex-column bg-blue-lightest ptxxxl pbxxxxl phxxxxl">
-
-            {% if page.title %}
-              <h1>{{ page.title }}</h1>
-            {% endif %}
-
-            {{ content }}
-
-          </div>
+  <div id="content" class="flex-row-cascade ptxxxl">
+    <div class="columns flex-row-expand flex-columns flex-columns-left mobile-flex-no-columns">
+      <div class="column column-page-sidebar flex-column flex-column-left bg-blue-lighter border-right prn position-relative mobile-position-fixed-top-full mobile-position-z-front ptxl">
+        <div class="phxl">
+          {% include toc.html %}
         </div>
       </div>
-      <div class="flex-column flex-column-right bg-blue-lightest"></div>
+      <div class="column column-page-main-wide flex-column flex-column-main bg-blue-lightest phxxxxl">
+
+        {% if page.title %}
+          <h1>{{ page.title }}</h1>
+        {% endif %}
+
+        {{ content }}
+
+      </div>
     </div>
   </div>
-  <footer class="bg-light-translucent">
-    <div class="container container-wide pvl">
-      {% if site.github.is_project_page %}
-        <div><a href="{{ site.github.repository_url }}">View the Project on GitHub {{ github_name }}</a></div>
-      {% endif %}
-    </div>
-  </footer>
 </body>
 </html>
