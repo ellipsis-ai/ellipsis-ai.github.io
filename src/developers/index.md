@@ -1,6 +1,5 @@
 ---
 title: Developer's guide to Ellipsis.ai
-chapter: developers
 ---
 
 ## [Reference](reference/)

@@ -1,7 +1,5 @@
 ---
 title: Developer’s reference
-chapter: developers
-section: reference
 ---
 
 The reference explains the core concepts and features of Ellipsis.
