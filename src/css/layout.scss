@@ -1,0 +1,62 @@
+---
+---
+
+@import "highlight";
+
+.highlight {
+  margin: 0 0 12px 0;
+  padding: 12px;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.flex-columns-auto {
+  display: flex;
+  flex-flow: row;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1.888888889rem;
+  line-height: 36px;
+}
+
+ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+ol.upper-roman {
+  list-style-type: upper-roman;
+}
+
+ol.upper-roman ol,
+ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+ol,
+ol.decimal,
+ol.upper-alpha ol {
+  list-style-type: decimal;
+}
+
+ol.lower-alpha,
+ol.decimal ol,
+ol.upper-alpha ol ol,
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol.lower-roman,
+ol.lower-alpha ol,
+ol.decimal ol ol,
+ol.upper-alpha ol ol ol,
+ol ol ol {
+  list-style-type: lower-roman;
+}

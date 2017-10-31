@@ -1,13 +1,9 @@
 theme: jekyll-theme-minimal
-
-
 source: src/
 destination: dist/
-
-title: Ellipsis · Get work done in chat
+title: Ellipsis Guide
 email: info@ellipsis.ai
-description: > # this means to ignore newlines until "baseurl:"
-  Ellipsis documentation.
+description: How to use Ellipsis.ai
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ellipsis.ai" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: EllipsisBot

@@ -1,4 +1,6 @@
-# Cloning and deleting actions
+---
+title: Cloning and deleting actions
+---
 
 ## Deleting
 

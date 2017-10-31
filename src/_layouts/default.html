@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:400,300,600,400italic,300italic,600italic' rel='stylesheet' type='text/css'>
+  <link href="https://assets.ellipsis.ai/stylesheets/bc7e5488ea3d837839fd3d289a77dfc5-main.css" rel="stylesheet">
+  <link href="/css/layout.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ellipsis Guide {% if page.title %} · {{ page.title }}{% endif %}</title>
+  <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+  <!--[if IE]><link rel="shortcut icon" href="/assets/images/favicon.ico"><![endif]-->
+
+  <!-- IE 10+ "Metro" Tiles - 144x144 pixels in size icon should be transparent -->
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="https://assets.ellipsis.ai/images/favicon-144x144.png">
+
+  <!-- Touch Icons - iOS and Android 2.1+ 152x152 pixels in size. -->
+  <link rel="apple-touch-icon-precomposed" href="https://assets.ellipsis.ai/images/favicon-apple-152x152.png">
+
+  <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 96x96 pixels in size. -->
+  <link rel="icon" href="https://assets.ellipsis.ai/images/favicon-256x256.png" sizes="256x256">
+  <link rel="icon" href="https://assets.ellipsis.ai/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" href="https://assets.ellipsis.ai/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://assets.ellipsis.ai/images/favicon-16x16.png" sizes="16x16">
+</head>
+<body class="flex-rows flex-rows-viewport bg-white">
+  <header id="main-header" class="position-fixed-top position-z-behind-scrim type-white bg-blue-dark">
+    <div class="container container-wide prm mobile-prs">
+      <div class="columns columns-elastic">
+        <div class="column column-expand pts mobile-ptxs">
+          <a class="link-pink display-inline-block align-b mrs mobile-mtxs pvxs" href="/">
+            <span class="display-inline-block align-m">{% include logo.html %}</span>
+            <span class="display-inline-block align-m mlxs mbxs type-bold"> Guide</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="content" class="flex-row-cascade ptxxxl">
+    <div class="columns flex-row-expand flex-columns flex-columns-left mobile-flex-no-columns">
+      <div class="column column-page-sidebar flex-column flex-column-left bg-blue-lighter border-right prn position-relative mobile-position-fixed-top-full mobile-position-z-front ptxl">
+        <div class="phxl">
+          {% include toc.html %}
+        </div>
+      </div>
+      <div class="column column-page-main-wide flex-column flex-column-main bg-blue-lightest phxxxxl">
+
+        {% if page.title %}
+          <h1>{{ page.title }}</h1>
+        {% endif %}
+
+        {{ content }}
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

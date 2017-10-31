@@ -1,4 +1,6 @@
-# Actions
+---
+title: Actions
+---
 
 Actions are how people on your team interact with Ellipsis. Each action can perform a task and/or respond to someone with an answer.
 
@@ -6,7 +8,7 @@ Actions can run code to perform dynamic tasks, or they can just return a static 
 
 ## Name and description
 
-Each action can have a name and description which can be used to help explain what it's for. Action names can also be used to trigger actions through the [../ellipsis_api/index.md](Ellipsis API). The name and description are optional.
+Each action can have a name and description which can be used to help explain what it's for. Action names can also be used to trigger actions through the [Ellipsis API](../api/v1/). The name and description are optional.
 
 ## Components of the action
 

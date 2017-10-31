@@ -1,4 +1,6 @@
-# Ellipsis Guide
+---
+title: Home
+---
 
-1. User's guide
-2. [Developer's guide](developers/index.html)
+Welcome to the Ellipsis Guide, a reference for how to use Ellipsis.ai. Use the table of contents to navigate through the guide.
+

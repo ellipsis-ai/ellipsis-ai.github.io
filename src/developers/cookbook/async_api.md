@@ -1,4 +1,6 @@
-# Async API
+---
+title: Async API
+---
 
 ## Problem
 You want to create a skill that uses an asynchronous API. You want the async API
@@ -24,7 +26,7 @@ report on behalf of the user, and then notify the user when the report is ready.
 
 In Ellipsis, the `get_report` implementation looks like this:
 
-```
+```javascript
 // request report action
 
 const EllipsisApi = ellipsis.require('ellipsis-api');
@@ -53,7 +55,7 @@ Assuming the Request Report system is implemented in Node.js, somewhere in the
 code, after the report has been generated and uploaded to S3, you can use the Ellipsis
 API to notify the user that the requested report is ready:
 
-```
+```javascript
 const request = require('request');
 const ellipsisData = getEllipsisData();
 
