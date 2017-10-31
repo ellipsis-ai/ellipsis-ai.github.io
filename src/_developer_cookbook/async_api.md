@@ -4,7 +4,7 @@ title: Async API
 
 ## Problem
 You want to create a skill that uses an asynchronous API. You want the async API
-to invoke an [action]({% link _developers/reference/actions.md %}), or notify a user or channel
+to invoke an [action]({% link _developer_reference/actions.md %}), or notify a user or channel
 when a specific event occurs.
 
 ## Solution
@@ -76,4 +76,4 @@ request({
 ```
 
 ## See also
-* [Ellipsis API]({% link _developers/reference/api/v1.md %})
+* [Ellipsis API]({% link _developer_reference/api/v1.md %})

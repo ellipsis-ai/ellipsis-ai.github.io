@@ -10,14 +10,23 @@ github_username:  ellipsis-ai
 repository: "ellipsis-ai/ellipsis-ai.github.io"
 
 collections:
-  developers:
+  developer_reference:
     output: true
-    permalink: /:collection/:path/
-    title: Developer’s guide
+    permalink: /developers/reference/:path/
+    title: Developer’s reference
+  developer_cookbook:
+    output: true
+    permalink: /developers/cookbook/:path/
+    title: Developer’s cookbook
 
 defaults:
   - scope:
       path: ""
-      type: developers
+      type: developer_reference
+    values:
+      layout: developers
+  - scope:
+      path: ""
+      type: developer_cookbook
     values:
       layout: developers

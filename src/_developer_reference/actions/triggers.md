@@ -41,7 +41,7 @@ _Non-matching messages:_
 
 ### Fill-in-the-blank input
 
-Phrase triggers can include "fill-in-the-blank" portions that match any text by using curly braces with a name, e.g. `{keyword}`. If you define [inputs]({% link _developers/reference/actions/inputs.md %}) with the same names, the text will be assigned for that input, instead of asking the user a question. The fill-in-the-blank name must be a single word, starting with a letter, and containing only letters, numbers and/or underscores.
+Phrase triggers can include "fill-in-the-blank" portions that match any text by using curly braces with a name, e.g. `{keyword}`. If you define [inputs]({% link _developer_reference/actions/inputs.md %}) with the same names, the text will be assigned for that input, instead of asking the user a question. The fill-in-the-blank name must be a single word, starting with a letter, and containing only letters, numbers and/or underscores.
 
 #### Example 1
 
