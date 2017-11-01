@@ -76,4 +76,4 @@ request({
 ```
 
 ## See also
-* [Ellipsis API]({% link _developer_reference/06_api/v1.md %})
+* [Ellipsis API]({% link _developer_reference/06_api.md %})

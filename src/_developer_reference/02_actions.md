@@ -8,7 +8,7 @@ Actions can run code to perform dynamic tasks, or they can just return a static 
 
 ## Name and description
 
-Each action can have a name and description which can be used to help explain what it's for. Action names can also be used to trigger actions through the [Ellipsis API]({% link _developer_reference/06_api/v1.md %}). The name and description are optional.
+Each action can have a name and description which can be used to help explain what it's for. Action names can also be used to trigger actions through the [Ellipsis API]({% link _developer_reference/06_api.md %}). The name and description are optional.
 
 ## Components of the action
 

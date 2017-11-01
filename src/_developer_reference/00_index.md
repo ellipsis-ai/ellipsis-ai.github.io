@@ -22,6 +22,6 @@ Ellipsis learns how to respond using **skills**, which can be installed or creat
 3. Custom data types
 4. Libraries
 5. Node.js `ellipsis` object
-6. [Ellipsis API]({% link _developer_reference/06_api/v1.md %})
+6. [Ellipsis API]({% link _developer_reference/06_api.md %})
 7. Third-party APIs
 8. Environment variables
