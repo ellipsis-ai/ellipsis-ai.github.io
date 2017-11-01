@@ -1,0 +1,14 @@
+{% for item in include.collection %}
+  {% assign item_path = (item.url | split: "/") %}
+  {% assign item_section = item_path[3] %}
+  {% assign item_page_id = item_path[4] %}
+  {% unless item_page_id %}
+    {% if item_section %}
+      <a href="{{ item.url }}"
+        class="{{ link_class }} plxxxl
+        {% if item.path == page.path %}{{ selected_class }}{% endif %}"
+      >{{ item.title }}</a>
+    {% endif %}
+  {% endunless %}
+  <!--{{ item_path[3] | trim }}·{{ item_path[4] | trim }}-->
+{% endfor %}
