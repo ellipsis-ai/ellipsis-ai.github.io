@@ -41,7 +41,7 @@ _Non-matching messages:_
 
 ### Fill-in-the-blank input
 
-Phrase triggers can include "fill-in-the-blank" portions that match any text by using curly braces with a name, e.g. `{keyword}`. If you define [inputs]({% link _developer_reference/actions/inputs.md %}) with the same names, the text will be assigned for that input, instead of asking the user a question. The fill-in-the-blank name must be a single word, starting with a letter, and containing only letters, numbers and/or underscores.
+Phrase triggers can include "fill-in-the-blank" portions that match any text by using curly braces with a name, e.g. `{keyword}`. If you define [inputs]({% link _developer_reference/02_actions/02_inputs.md %}) with the same names, the text will be assigned for that input, instead of asking the user a question. The fill-in-the-blank name must be a single word, starting with a letter, and containing only letters, numbers and/or underscores.
 
 #### Example 1
 
@@ -68,7 +68,7 @@ _Matching messages:_
 
 ### Regular expression triggers
 
-Regular expression (aka regex) triggers use [Java-8-compatible pattern matching](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html). This permits a lot more flexibility in terms of deciding what text should match, at the expense of readability. (It's usually a good idea to define at least one phrase trigger in addition to any regular expression triggers.)
+Regular expression (aka regex) triggers use [Java-8-compatible pattern matching](https://docs.oracle.com/javase/8/docs/06_api/java/util/regex/Pattern.html). This permits a lot more flexibility in terms of deciding what text should match, at the expense of readability. (It's usually a good idea to define at least one phrase trigger in addition to any regular expression triggers.)
 
 #### Example
 

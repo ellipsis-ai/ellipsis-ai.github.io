@@ -6,7 +6,7 @@ The template tells Ellipsis what to say to the user when the action is complete.
 
 - plain text
 - Markdown-style formatting
-- text or data calculated by the [function]({% link _developer_reference/actions/function.md %})
+- text or data calculated by the [function]({% link _developer_reference/02_actions/03_function.md %})
 - if/else logic and looping over lists (arrays)
 
 ## Markdown-style formatting

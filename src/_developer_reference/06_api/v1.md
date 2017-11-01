@@ -8,11 +8,11 @@ title: API reference
 
 For instance, let's say you have created an Action called "echo" that takes
 and argument called _text_ and just prints it out. You can
-run this action by doing an HTTP POST to https://bot.ellipisis.ai/api/v1/action_requests
+run this action by doing an HTTP POST to https://bot.ellipisis.ai/06_api/v1/action_requests
 with the following body:
 
 ```
-curl https://bot.ellipsis.ai/api/v1/action_requests \
+curl https://bot.ellipsis.ai/06_api/v1/action_requests \
    -X POST \
    -d "message=...echo Ciao!" \
    -d "responseContext=slack" \
@@ -23,7 +23,7 @@ curl https://bot.ellipsis.ai/api/v1/action_requests \
 Or if you want want Ellipsis to send a message to user @mark:
 
 ```
-curl https://bot.ellipsis.ai/api/v1/messages \
+curl https://bot.ellipsis.ai/06_api/v1/messages \
    -X POST \
    -d "message=Hello" \
    -d "responseContext=slack" \

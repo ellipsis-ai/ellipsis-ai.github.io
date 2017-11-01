@@ -4,7 +4,7 @@ title: Async API
 
 ## Problem
 You want to create a skill that uses an asynchronous API. You want the async API
-to invoke an [action]({% link _developer_reference/actions.md %}), or notify a user or channel
+to invoke an [action]({% link _developer_reference/02_actions.md %}), or notify a user or channel
 when a specific event occurs.
 
 ## Solution
@@ -66,7 +66,7 @@ const content = {
   token: ellipsisData.token
 };
 request({
-  url: "https://bot.ellipsis.ai/api/v1/say",
+  url: "https://bot.ellipsis.ai/06_api/v1/say",
   method: "POST",
   json: true,
   body: content
@@ -76,4 +76,4 @@ request({
 ```
 
 ## See also
-* [Ellipsis API]({% link _developer_reference/api/v1.md %})
+* [Ellipsis API]({% link _developer_reference/06_api/v1.md %})

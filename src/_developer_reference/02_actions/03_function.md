@@ -4,15 +4,15 @@ title: Node.js function
 
 **Each action can run a single JavaScript function that performs a task or calculates something.**
 
-The function should end by telling Ellipsis that it completed successfully (including any text or data you want to include in the [response]({% link _developer_reference/actions/template.md %})), or else it can signal that an error occurred, or that there should be no response.
+The function should end by telling Ellipsis that it completed successfully (including any text or data you want to include in the [response]({% link _developer_reference/02_actions/04_template.md %})), or else it can signal that an error occurred, or that there should be no response.
 
 Adding a function is optional. If you want your action to return the same response every time, you don't need to write any code.
 
-Functions run in the Node.js environment (v6.10.2). That means you can use [any documented feature of Node.js](https://nodejs.org/dist/latest-v6.x/docs/api/), and you can also load other modules using the `require` feature -- either skill libraries, or any [NPM package](https://www.npmjs.com/).
+Functions run in the Node.js environment (v6.10.2). That means you can use [any documented feature of Node.js](https://nodejs.org/dist/latest-v6.x/docs/06_api/), and you can also load other modules using the `require` feature -- either skill libraries, or any [NPM package](https://www.npmjs.com/).
 
 ## Function parameters
 
-The function itself is always declared for you. It will automatically receive an `ellipsis` object as a parameter. If you've defined any [inputs]({% link _developer_reference/actions/inputs.md %}), each of those will also be received as parameters. In other words, you only need to write the "inside" of the function.
+The function itself is always declared for you. It will automatically receive an `ellipsis` object as a parameter. If you've defined any [inputs]({% link _developer_reference/02_actions/02_inputs.md %}), each of those will also be received as parameters. In other words, you only need to write the "inside" of the function.
 
 ```javascript
 module.exports = function(ellipsis) {
@@ -44,7 +44,7 @@ You will see an error message if your function runs without calling one of these
 
 #### Example: Hello world
 
-You can send a string you want to include in the response. Insert it into the [response template]({% link _developer_reference/actions/template.md %}) using the `{successResult}` placeholder.
+You can send a string you want to include in the response. Insert it into the [response template]({% link _developer_reference/02_actions/04_template.md %}) using the `{successResult}` placeholder.
 
 ```javascript
 module.exports = function(ellipsis) {
@@ -66,7 +66,7 @@ module.exports = function(ellipsis) {
 
 #### Example: using inputs to construct a response
 
-In this example, two [inputs]({% link _developer_reference/actions/inputs.md %}) have been configured -- `firstName` and
+In this example, two [inputs]({% link _developer_reference/02_actions/02_inputs.md %}) have been configured -- `firstName` and
 `lastName`, and it uses [JavaScript's template literal syntax](https://developer.mozilla.org/docs/Web/JavaScript/Reference/template_strings) to format the text more easily.
 
 ```javascript
