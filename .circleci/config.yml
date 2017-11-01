@@ -32,3 +32,7 @@ jobs:
               echo -e "[deployer]\naws_access_key_id = ${DEPLOYER_AWS_KEY}\naws_secret_access_key = ${DEPLOYER_AWS_SECRET}\nregion = us-east-1" >> ~/.aws/credentials
               AWS_PROFILE=deployer ./deploy
             fi
+notify:
+  webhooks:
+    # A list of hook hashes, containing the URL field
+    - url: https://hooks.slack.com/services/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
