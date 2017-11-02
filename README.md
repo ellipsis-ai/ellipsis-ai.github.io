@@ -1,6 +1,6 @@
 # Ellipsis Guide
 
-[![CircleCI](https://circleci.com/gh/ellipsis-ai/ellipsis.svg?style=svg)](https://circleci.com/gh/ellipsis-ai/ellipsis)
+[![CircleCI](https://circleci.com/gh/ellipsis-ai/ellipsis-ai.github.io/tree/master.svg?style=svg&circle-token=bcbf1fb20a79a53234c2b9fee2bb90acfe117a72)](https://circleci.com/gh/ellipsis-ai/ellipsis-ai.github.io/tree/master)
 
 This is the documentation for Ellipsis.ai.
 
