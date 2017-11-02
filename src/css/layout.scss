@@ -22,9 +22,28 @@ h2 {
   line-height: 36px;
 }
 
+.type-faded {
+  opacity: .67;
+}
+
 ol {
   padding-left: 1.5em;
   margin: 0.5em 0 0.5em 0;
+}
+
+ol.outline-nav,
+ol.outline-nav ol {
+  padding: 0;
+  margin: 0.5em 0 0.5em 0;
+}
+
+ol.outline-nav li {
+  list-style-position: inside;
+  padding-left: 1.5em;
+}
+
+ol.outline-nav a {
+  color: inherit;
 }
 
 li {

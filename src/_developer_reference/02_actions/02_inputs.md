@@ -1,5 +1,6 @@
 ---
 title: Inputs
+number: b
 ---
 
 Adding inputs to an [action]({% link _developer_reference/02_actions.md %}) allows you to collect answers from the user that can then be used in your [function]({% link _developer_reference/02_actions/03_function.md %}). Answers are collected after a user triggers the action, before the function runs.

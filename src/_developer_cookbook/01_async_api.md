@@ -1,5 +1,6 @@
 ---
 title: Async API
+number: 1
 ---
 
 ## Problem
