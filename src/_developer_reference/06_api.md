@@ -1,5 +1,6 @@
 ---
 title: API reference
+number: 6
 ---
 
 ## Authentication

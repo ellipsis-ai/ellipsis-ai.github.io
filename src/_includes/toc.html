@@ -1,5 +1,7 @@
-{% assign link_class = "pvxs display-block phxl" %}
+{% assign link_class = "pvxs display-block phl" %}
+{% assign section_class = "type-bold" %}
 {% assign selected_class = "type-white bg-blue mrneg1" %}
+{% assign number_class = "type-regular type-faded" %}
 
 <a href="/"
   class="
@@ -7,7 +9,7 @@
     {% if page.path == 'index.md' %}{{ selected_class }}{% endif %}"
 >Home</a>
 
-<h5 class="phxl">Contents</h5>
+<h5 class="phl">Contents</h5>
 
 <!--
 Path: {{ page.path }}
@@ -15,45 +17,37 @@ Name: {{ page.name }}
 Title: {{ page.title }}
 Collection: {{ page.collection }}
 {{ :path }}
-{% assign page_path = (page.url | split: "/") | compact %}
-{% assign page_section = page_path[3] %}
-{% assign page_id = page_path[4] %}
 Path components: {% for pathname in page_path %}{{ pathname | remove_first: ".md" }} · {% endfor %}
+{% for collection in site.collections %}
+  {% for item in collection.sections %}
+    {{ item.number }}. {{ item.title }}
+  {% endfor %}
+{% endfor %}
 -->
 
 <div>
   <a href="{% link developers/index.md %}"
      class="
-      {{ link_class }} pll
+      {{ link_class }}
       {% if page.path == 'developers/index.md' %}{{ selected_class }}{% endif %}"
-  >I. Developer’s guide</a>
+  ><span class="{{ number_class }}">I. </span>Developer’s guide</a>
   <a href="{% link _developer_reference/00_index.md %}"
      class="
       {{ link_class }} plxxl
-      {% if page.collection == 'developer_reference' %}type-bold{% endif %}
+      {% if page.collection == 'developer_reference' %}{{ section_class }}{% endif %}
       {% if page.path == '_developer_reference/00_index.md' %}{{ selected_class }}{% endif %}"
-  >A. Reference</a>
+  ><span class="{{ number_class }}">A. </span>Reference</a>
   {% if page.collection == 'developer_reference' %}
     {% include collection.html collection=site.developer_reference %}
   {% endif %}
-  <!--
-    {% for item in site.developer_reference %}
-      {{ item.title }}: {{ item.url }}
-    {% endfor %}
-  -->
   <a href="{% link _developer_cookbook/00_index.md %}"
      class="
       {{ link_class }} plxxl
-      {% if page.collection == 'developer_cookbook' %}type-bold{% endif %}
+      {% if page.collection == 'developer_cookbook' %}{{ section_class }}{% endif %}
       {% if page.path == '_developer_cookbook/00_index.md' %}{{ selected_class }}{% endif %}"
       "
-  >B. Cookbook</a>
+  ><span class="{{ number_class }}">B. </span>Cookbook</a>
   {% if page.collection == 'developer_cookbook' %}
     {% include collection.html collection=site.developer_cookbook %}
   {% endif %}
-  <!--
-    {% for item in site.developer_cookbook %}
-      {{ item.title }}: {{ item.url }}
-    {% endfor %}
-  -->
 </div>

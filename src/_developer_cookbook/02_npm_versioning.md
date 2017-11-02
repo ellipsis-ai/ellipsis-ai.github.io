@@ -1,5 +1,6 @@
 ---
 title: NPM Versioning
+number: 2
 ---
 
 ## Problem

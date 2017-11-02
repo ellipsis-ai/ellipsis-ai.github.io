@@ -1,5 +1,6 @@
 ---
 title: Node.js function
+number: c
 ---
 
 **Each action can run a single JavaScript function that performs a task or calculates something.**

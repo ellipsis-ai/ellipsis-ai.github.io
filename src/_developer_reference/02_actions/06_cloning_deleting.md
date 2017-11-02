@@ -1,5 +1,6 @@
 ---
 title: Cloning and deleting actions
+number: f
 ---
 
 ## Deleting

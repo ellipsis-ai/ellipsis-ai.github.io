@@ -1,3 +1,6 @@
+{% assign page_path = (page.url | split: "/") | compact %}
+{% assign page_section = page_path[3] %}
+{% assign page_id = page_path[4] %}
 {% for item in include.collection %}
   {% assign item_path = (item.url | split: "/") %}
   {% assign item_section = item_path[3] %}
@@ -6,9 +9,23 @@
     {% if item_section %}
       <a href="{{ item.url }}"
         class="{{ link_class }} plxxxl
-        {% if item.path == page.path %}{{ selected_class }}{% endif %}"
-      >{{ item.title }}</a>
+        {% if item.path == page.path %}
+          {{ selected_class }}
+        {% elsif item_section == page_section %}
+          {{ section_class }}
+        {% endif %}"
+      ><span class="{{ number_class }}">{{ item.number }}. </span>{{ item.title }}</a>
     {% endif %}
   {% endunless %}
+  {% if item_section == page_section %}
+    {% if item_page_id %}
+      <a href="{{ item.url }}"
+        class="{{ link_class }} plxxxxl
+        {% if item.path == page.path %}
+          {{ selected_class }}
+        {% endif %}"
+      ><span class="{{ number_class }}">{{ item.number }}. </span>{{ item.title }}</a>
+    {% endif %}
+  {% endif %}
   <!--{{ item_path[3] | trim }}·{{ item_path[4] | trim }}-->
 {% endfor %}
