@@ -10,8 +10,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: gems-v1-{{ checksum "Gemfile.lock" }}
-          key: gems-v1-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          keys:
+            - gems-v1-{{ checksum "Gemfile.lock" }}
+            - gems-v1-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install Ruby dependencies
           command: |
