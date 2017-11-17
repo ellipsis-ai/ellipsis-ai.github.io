@@ -9,5 +9,5 @@ fi
 aws configure set preview.cloudfront true
 aws s3 sync ./dist s3://docs.ellipsis.ai/ --acl=public-read --delete
 aws cloudfront create-invalidation \
-       --paths /index.html /assets/*  /developers/* \
+       --paths /index.html /css/*  /developers/* \
        --distribution-id E18Q2N6CZFALZW
