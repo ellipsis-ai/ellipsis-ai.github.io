@@ -10,12 +10,12 @@ services:
   jekyll:
     image: ellipsis/circleci_www:1.0
     volumes:
-      - .:/www
+      - .:/docs
     volumes_from:
        - box
     ports:
       - "4000:4000"
-    working_dir: /www
+    working_dir: /docs
     command: bash -c "bundle install && bundle exec jekyll serve --host=0.0.0.0"
 
   box:
