@@ -67,7 +67,7 @@ const content = {
   token: ellipsisData.token
 };
 request({
-  url: "https://bot.ellipsis.ai/06_api/v1/say",
+  url: "https://bot.ellipsis.ai/api/v1/commands/say",
   method: "POST",
   json: true,
   body: content
