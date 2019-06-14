@@ -21,7 +21,8 @@ Ellipsis learns how to respond using **skills**, which can be installed or creat
     6. [Cloning and deleting]({% link _developer_reference/02_actions/06_cloning_deleting.md %})
 3. Custom data types
 4. Libraries
-5. Node.js `ellipsis` object
-6. [Ellipsis API]({% link _developer_reference/06_api.md %})
-7. Third-party APIs
-8. Environment variables
+5. Tests
+6. Node.js `ellipsis` object
+7. [Ellipsis API]({% link _developer_reference/07_api.md %})
+8. Third-party APIs
+9. Environment variables

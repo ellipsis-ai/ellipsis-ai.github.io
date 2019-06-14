@@ -1,6 +1,6 @@
 ---
 title: Async API
-number: 1
+number: 2
 ---
 
 ## Problem
@@ -77,4 +77,4 @@ request({
 ```
 
 ## See also
-* [Ellipsis API]({% link _developer_reference/06_api.md %})
+* [Ellipsis API]({% link _developer_reference/07_api.md %})
