@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ellipsis/circleci_www:1.0
+      - image: ellipsis/ellipsis-aigithubio_jekyll:1.0
         environment:
           AWS_REGION: us-east-1
           JEKYLL_ENV: production
