@@ -5,14 +5,16 @@
 # NOTE 2: busybox is used to cache the gems so we do not have to bundle install
 # everytime we start the container.
 #
-version: '2'
+version: '3'
+volumes:
+  box:
 services:
   jekyll:
-    image: ellipsis/circleci_www:1.0
+    build: .
     volumes:
       - .:/www
-    volumes_from:
-       - box
+    volumes:
+       - box:/box
     ports:
       - "4000:4000"
     working_dir: /www
@@ -20,6 +22,6 @@ services:
 
   box:
     image: busybox
-    command: "echo busybox rady to host gems"
+    command: "echo busybox ready to host gems"
     volumes:
-      - /box
+      - box:/box
